@@ -237,7 +237,7 @@
         }
 
         CsvToHtmlTable.init({
-            csv_path: "static/data/clean_data.csv",
+            csv_path: "url_for('static', filename='data/clean_data.csv')",
             element: "table-container",
             allow_download: true,
             csv_options: {
