@@ -192,9 +192,6 @@
         </div>
     </footer>
 </div>
-<script type="text/javascript"
-          src="{{ static_url_for('static', filename='js/pagination.js') }}"></script>
-<script src="{% url_for('static', filename='js/jobs.js' %}"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/js/bootstrap.bundle.min.js"></script>
 <script src="static/js/jquery.csv.min.js"></script>
@@ -205,6 +202,12 @@
 <script src="static/js/jobs.js"></script>
 <script src="static/js/db.js"></script>
 <script src="static/js/pagination.js"></script>
+
+<script src="{{url_for('static', filename='js/csv_to_html_table.js')}}"></script>
+<script src="{{url_for('static', filename='js/multi_select.js')}}"></script>
+<script src="{{url_for('static', filename='js/skills.js')}}"></script>
+<script src="{{url_for('static', filename='js/jobs.js')}}"></script>
+<script src="{{url_for('static', filename='js/pagination.js')}}"></script>
 <script>
     function myPred() {
     var box, option, skills,   txtValue, txtValues;
