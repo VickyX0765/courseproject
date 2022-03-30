@@ -1,0 +1,19 @@
+
+tfoot input {
+    width: 100%;
+    padding: 3px;
+    box-sizing: border-box;
+}
+
+.float-container {
+    border: 3px solid #fff;
+    padding: 20px;
+    width: 100%;
+}
+
+.float-child {
+    width: 50%;
+    height: 120px;
+    float: left;
+    padding: 20px;
+}

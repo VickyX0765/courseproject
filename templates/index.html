@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Job Recommender System</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="css/table.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+<h1>Job Recommender System</h1>
+<br>
+<br>
+<h3>
+  Welcome to the Job Recommender System!
+</h3>
+<h1> ###PLEASE GIVE SOME SUGGESTIONS ABOUT WHAT SHOULD WE WRITE HERE.</h1>
+<a href="https://gradstudies.engineering.utoronto.ca/professional-degrees/emphasis-in-analytics/">Click here to see more details about elective courses at Emphasis in Analytics provided by University of Toronto</a>
+<link href="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" />
+<script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="https://cdn.rawgit.com/crlcu/multiselect/v2.5.1/dist/js/multiselect.min.js"></script>
+<div class="float-container">
+    <div class="container">
+        <h4>Select Courses</h4>
+        <p>Use <i class="glyphicon glyphicon-backward"></i>  button below to RESET</p>
+        <div class="row">
+            <div class="col-xs-5">
+
+                <select name="from[]" id="multiselect" class="form-control" size="8" multiple="multiple">
+                    <option value="APS502H" title= "APS 502H Financial Engineering">APS 502H</option>
+                    <option value="APS1005H" title= "APS 1005H Operations Research for Engineering Management">APS 1005H</option>
+                    <option value="APS1022H" title= "APS 1022H Financial Engineering II">APS 1022H</option>
+                    <option value="APS1040H" title= "APS 1040H Quality Control for Engineering Management">APS 1040H</option>
+                    <option value="APS1050H" title= "APS 1050H Blockchain Technologies And Cryptocurrencies">APS 1050H</option>
+                    <option value="APS1051H" title= "APS 1051H Portfolio Management Praxis Under Real Market Constraint">APS 1051H</option>
+                    <option value="APS1052H" title= "APS 1052H A.I. in Finance">APS 1052H</option>
+                    <option value="APS1080H" title= "APS 1080H Introduction to Reinforcement Learning">APS 1080H</option>
+                    <option value="CHE507H" title= "CHE 507H Data-based Modelling for Prediction and Control">CHE 507H</option>
+                    <option value="CHE1148H" title= "CHE 1148H Process Data Analytics">CHE 1148H</option>
+                    <option value="CHE1434H" title= "CHE 1434H Six Sigma for Chemical Processes">CHE 1434H</option>
+                    <option value="CEM1002H" title= "CEM 1002H Empirical Study of Cities">CEM 1002H</option>
+                    <option value="ECE1778H" title= "ECE 1778H Creative Applications for Mobile Devices">ECE 1778H</option>
+                    <option value="ECE1779H" title= "ECE 1779H Introduction to Cloud Computing (ECE students only)">ECE 1779H</option>
+                    <option value="MIE1413H" title= "MIE 1413H Statistical Models in Empirical Research">MIE 1413H</option>
+                    <option value="MIE1501H" title= "MIE 1501H Knowledge Modelling and Management">MIE 1501H</option>
+                    <option value="MIE1512H" title= "MIE 1512H Data Analytics">MIE 1512H</option>
+                    <option value="MIE1513H" title= "MIE 1513H Decision Support Systems">MIE 1513H</option>
+                    <option value="MIE1517H" title= "MIE 1517H Introduction to Deep Learning">MIE 1517H</option>
+                    <option value="MIE1621H" title= "MIE 1621H Non­Linear Optimization">MIE 1621H</option>
+                    <option value="MIE1622H" title= "MIE 1622H Computational Finance and Risk Management">MIE 1622H</option>
+                    <option value="MIE1628H" title= "MIE 1628H Cloud-based Data Analytics (formerly Big Data Science)">MIE 1628H</option>
+                    <option value="MSE1063H" title= "MSE 1063H Application of Artificial Intelligence in Process Metallurgy">MSE 1063H</option>
+                </select>
+            </div>
+
+            <div class="col-xs-2">
+
+                <button type="button" id="multiselect_rightAll" class="btn btn-block"><i class="glyphicon glyphicon-forward"></i></button>
+                <button type="button" id="multiselect_rightSelected" class="btn btn-block"><i class="glyphicon glyphicon-chevron-right"></i></button>
+                <button type="button" id="multiselect_leftSelected" class="btn btn-block"><i class="glyphicon glyphicon-chevron-left"></i></button>
+                <button type="button" id="multiselect_leftAll" class="btn btn-block"><i class="glyphicon glyphicon-backward"></i></button>
+            </div>
+
+            <div class="col-xs-5">
+                <select name="to[]" id="multiselect_to" class="form-control" size="8" multiple="multiple"></select>
+            </div>
+        </div>
+
+    </div>
+</div>
+<br>
+<div class="float-container">
+    <div class="container">
+        <input type="submit" value="Pop up skills based on courses" onclick="findSkills()" />
+    </div>
+</div>
+<br>
+<br>
+<div class="float-container">
+    <div class="container">
+        <h4>Select Skills</h4>
+        <p>Use <i class="glyphicon glyphicon-backward"></i>  button below to RESET</p>
+        <div class="row">
+            <div class="col-xs-5">
+
+                <select name="from[]" id="multiselect2" class="form-control" size="8" multiple="multiple">
+                    <option value="ampl">AMPL</option>
+                    <option value="android">Android</option>
+                    <option value="aws">AWS</option>
+                    <option value="azure">Azure</option>
+                    <option value="c">C</option>
+                    <option value="c++">C++</option>
+                    <option value="cloud platform">Cloud Platform</option>
+                    <option value="excel">Excel</option>
+                    <option value="hadoop">Hadoop</option>
+                    <option value="ios">IOS</option>
+                    <option value="javascript">Javascript</option>
+                    <option value="keras">Keras</option>
+                    <option value="matlab">MATLAB</option>
+                    <option value="minitab">Minitab</option>
+                    <option value="python">Python</option>
+                    <option value="r">R</option>
+                    <option value="rapidminer">RapidMiner</option>
+                    <option value="rdf">RDF</option>
+                    <option value="sas">SAS</option>
+                    <option value="spark">Spark</option>
+                    <option value="sparql">SPARQL</option>
+                    <option value="sql">SQL</option>
+                    <option value="tensorflow">TensorFlow</option>
+                    <option value="truffle framework">Truffle Framework</option>
+                    <option value="vba">VB</option>
+                    <option value="vba">VBA</option>
+                </select>
+            </div>
+
+            <div class="col-xs-2">
+
+                <button type="button" id="multiselect2_rightAll" class="btn btn-block"><i class="glyphicon glyphicon-forward"></i></button>
+                <button type="button" id="multiselect2_rightSelected" class="btn btn-block"><i class="glyphicon glyphicon-chevron-right"></i></button>
+                <button type="button" id="multiselect2_leftSelected" class="btn btn-block"><i class="glyphicon glyphicon-chevron-left"></i></button>
+                <button type="button" id="multiselect2_leftAll" class="btn btn-block"><i class="glyphicon glyphicon-backward"></i></button>
+            </div>
+
+            <div class="col-xs-5">
+                <select name="to[]" id="multiselect2_to" class="form-control" size="8" multiple="multiple"></select>
+            </div>
+        </div>
+
+    </div>
+</div>
+<br>
+        <div class="container">
+
+            <input type="submit" value="Recommend Job Types" onclick="myPred()" />
+            <div class="show_res" id="res"></div>
+        </div>
+<br>
+<div class="float-container">
+    <div class="container">
+        <input type="submit" value="Search based on titles" onclick="searchByTitles()" />
+    </div>
+    <br>
+<!--    <div class="container">-->
+<!--        <input type="submit" value="Search based on skills" onclick="searchBySkills()" />-->
+<!--    </div>-->
+    <br>
+    <div class="container">
+        <input type="submit" value="Clear filters" onclick="clearFilter()" />
+    </div>
+</div>
+<div class="container-fluid">
+    <main class="row">
+        <div class="col">
+            <h4>Select number of record to display in each page</h4>
+            <div class="form-group">
+                <select class  ="form-control" name="state" id="maxRows">
+                    <option selected hidden>Choose here</option>
+                    <option value="1000">Show ALL Rows</option>
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="20">20</option>
+                    <option value="100">100</option>
+                </select>
+            </div>
+            <div id="table-container"></div>
+            <!--		Start Pagination -->
+            <div class='pagination-container' >
+                <nav>
+                    <ul class="pagination">
+
+                        <li data-page="prev" >
+                            <span> < <span class="sr-only">(current)</span></span>
+                        </li>
+                        <!--	Here the JS Function Will Add the Rows -->
+                        <li data-page="next" id="prev">
+                            <span> > <span class="sr-only">(current)</span></span>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </main>
+    <footer class="row">
+        <div class="col">
+            <hr>
+            <p class="text-right">MIE 1624 group 21</p>
+        </div>
+    </footer>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/js/bootstrap.bundle.min.js"></script>
+<script src="static/js/jquery.csv.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+<script src="static/js/csv_to_html_table.js"></script>
+<script src="static/js/multi_select.js"></script>
+<script src="static/js/skills.js"></script>
+<script src="static/js/jobs.js"></script>
+<script src="static/js/db.js"></script>
+<script src="static/js/pagination.js"></script>
+<script>
+    function myPred() {
+    var box, option, skills,   txtValue, txtValues;
+    skills = ""
+    box = document.getElementById("multiselect2_to");
+    option = box.getElementsByTagName("option")
+    for (var i=0; i<option.length; i++) {
+        skills = skills + (option[i].value);
+    }
+    $.ajax({
+    url: "/pred",
+    type: "POST",
+    data: {skills:skills}
+    }).done(function(response) {
+    var html= "<br><br><br><p> <b> Top Career Choices : <b><p><ul>";
+        response =response.result;
+        $.each(response,function(key,val){
+        html+=val
+        });
+        html +="</ul><br>";
+        $(".show_res").html(html);
+        });
+        };
+</script>
+<script>
+        function format_link(link) {
+            if (link)
+                return "<a href='" + link + "' target='_blank'>" + link + "</a>";
+            else return "";
+        }
+
+        CsvToHtmlTable.init({
+            csv_path: "static/data/clean_data.csv",
+            element: "table-container",
+            allow_download: true,
+            csv_options: {
+                separator: ",",
+                delimiter: '"'
+            },
+            datatables_options: {
+                paging: false
+            },
+            custom_formatting: [
+                [6, format_link]
+            ]
+        });
+    </script>
+
+</body>
+
+</html>
